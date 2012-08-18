@@ -3,24 +3,7 @@
  * A native NodeJS WebSocket Library
  * 
  * @author Dan Cobb
- * @version 0.1
- * 
- * @example
-var http = require("http");
-var upgrade = require("./upgrade.js");
-
-var server = http.createServer();
-
-server.on("upgrade", function (req, socket) {
-    // Write header for upgrade request
-    upgrade.writeHead(req, socket);
-
-    socket.on("data", function (buff) {
-       var data = upgrade.getData(buff);
-       console.log(">" + data);
-    });
-});
-server.listen(8000);
+ * @version 0.1.2
  */
 
 /**
