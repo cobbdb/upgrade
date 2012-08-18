@@ -3,7 +3,7 @@
  * A native NodeJS WebSocket Library
  * 
  * @author Dan Cobb
- * @version 0.1.2
+ * @version 0.1.3
  */
 
 /**
