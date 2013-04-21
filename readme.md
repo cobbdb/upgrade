@@ -1,112 +1,118 @@
 # UpgradeJS
-A simple NodeJS websocket library to handle http upgrades.
+### A simple NodeJS websocket library to handle http upgrades.
+Version **1.0.0**
+
+---
+* See: [NPM Page](https://npmjs.org/package/upgrade)
+* See: [Github Repo](http://www.github.com/cobbdb/UpgradeJS)
+
+### Installation
+> ```
+npm install upgrade
+```
 
 ### Usage
-```javascript
-var http = require("http");
-var upgrade = require("upgrade");
-
+###### Here is an example of a basic upgrade setup:
+> ```JavaScript
+// server.js
+var http = require('http');
+var upgrade = require('upgrade');
 var server = http.createServer();
-
-server.on("upgrade", function (req, socket) {
-    // Write header for upgrade request
+server.on('upgrade', function (req, socket) {
+    var send = upgrade.getSend(socket);
     upgrade.writeHead(req, socket);
-
-    socket.on("data", function (buff) {
+    socket.on('data', function (buff) {
         var data = upgrade.getData(buff);
-        console.log(">" + data);
+        console.log('> ' + data);
     });
+    send('Welcome to the Server!');
 });
 server.listen(8000);
+```
+```JavaScript
+// client.js
+var socket = new WebSocket('ws://localhost:8000');
+socket.onopen = function () {
+    socket.send('Hello Server!');
+    console.log('> Socket Open.');
+};
+socket.onmessage = function (evt) {
+    var msg = evt.data;
+    console.log('> ' + msg);
+};
 ```
 
 
 ## writeHead(req, socket)
 Write upgrade handshake header to socket.
 
-### Usage
-```javascript
-...
-server.on("upgrade", function (req, socket) {
-    upgrade.writeHead(req, socket);
-    ...
-```
+**Parameters**
+* {ServerRequest} req - ServerRequest from HTTPServer.
+* {Socket} socket - Socket from upgrade event.
 
-### Parameters
-* {ServerRequest} req ServerRequest from HTTPServer.
-* {Socket} socket Socket from upgrade event.
+```JavaScript
+server.on('upgrade', function (req, socket) {
+    upgrade.writeHead(req, socket);
+```
 
 
 ## getData(buffer)
 Removes mask from incoming frame.
 
-### Usage
-```javascript
-    ...
-    socket.on("data", function (buff) {
-        var data = upgrade.getData(buff);
-        ...
+**Parameters**
+* {Buffer} buffer - Buffer object from data event of WebSocket.
+
+**Returns** {String} Unmasked data.
+
+```JavaScript
+socket.on('data', function (buff) {
+    var data = upgrade.getData(buff);
 ```
-
-### Parameters
-* {Buffer} buffer Buffer object from data event of WebSocket.
-
-### Returns
-* {String} Unmasked data.
 
 
 ## frameData(msg)
 Wraps data in a websocket frame. Note that UpgradeJS does not support payloads larger than 125 bytes.
 
-### Usage
-```javascript
-    ...
-    var data = exports.frameData(message);
-    socket.write(data);
-    ...
+**Parameters**
+* {String} msg - Some data to wrap.
+
+**Returns** {Buffer} Hex encoded Buffer.  
+**Throws** {RangeError}
+
+```JavaScript
+var data = exports.frameData(message);
+socket.write(data);
 ```
-
-### Parameters
-* {String} msg Some data to wrap.
-
-### Returns
-* {Buffer} Hex encoded Buffer.
-
-### Throws
-* {RangeError}
 
 
 ## getSend(socket)
 Convenience method to lock send behavior to a specific socket.
 
-### Usage
-```javascript
-    ...
-    var send = upgrade.getSend(socket);
-    send("foo");
-    send("bar");
+**Parameters**
+* {Socket} socket - The socket to communicate over.
+
+**Returns** {Function} Send behavior using a specific socket.
+
+```JavaScript
+var send = upgrade.getSend(socket);
+send('foo');
+send('bar');
 ```
-
-### Parameters
-* {Socket} socket The socket to communicate over.
-
-### Returns
-* {Function} Send behavior using a specific socket.
 
 
 ## send(msg, socket)
 Convenience method for sending framed data.
 
-### Usage
-```javascript
-    ...
-    upgrade.send("foo", socket);
-    upgrade.send("bar", socket);
+**Parameters**
+* {String} msg - Data to send across websocket.
+* {Socket} socket - The socket to commincate over.
+
+**Throws** {RangeError}
+
+```JavaScript
+upgrade.send('foo', socket);
+upgrade.send('bar', socket);
 ```
 
-### Parameters
-* {String} msg Data to send across websocket.
-* {Socket} socket The socket to commincate over.
-
-### Throws
-* {RangeError}
+---
+By Dan Cobb: <cobbdb@gmail.com> - [petitgibier.sytes.net](http://petitgibier.sytes.net)

@@ -1,62 +1,55 @@
 /**
  * UpgradeJS
- * A native NodeJS WebSocket Library
+ * A native NodeJS WebSocket library.
  * 
  * @author Dan Cobb
- * @version 0.2.0
+ * @version 1.0.0
  */
 
-/**
- * @description Imported
- */
-var crypto = require("crypto");
-
+var crypto = require('crypto');
 
 /**
- * @description Write upgrade handshake header to socket.
+ * Write upgrade handshake header to socket.
  * @param {ServerRequest} req ServerRequest from HTTPServer.
  * @param {Socket} socket Socket from upgrade event.
  * @see http://tools.ietf.org/html/rfc6455#section-1.3
- * @since v0.2.0
  */
 exports.writeHead = function (req, socket) {
-    var key = req.headers["sec-websocket-key"];
-    var hash = crypto.createHash("sha1");
-    var $GUID = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
-    hash.update(key + $GUID, "utf8");
-    key = hash.digest("base64");
+    var key = req.headers['sec-websocket-key'];
+    var hash = crypto.createHash('sha1');
+    var $GUID = '258EAFA5-E914-47DA-95CA-C5AB0DC85B11';
+    hash.update(key + $GUID, 'utf8');
+    key = hash.digest('base64');
     
     socket.write(
-        "HTTP/1.1 101 Web Socket Protocol Handshake\r\n" +
-        "Upgrade: WebSocket\r\n" +
-        "Connection: Upgrade\r\n" +
-        "Sec-WebSocket-Accept: " + key + "\r\n" +
-        "\r\n"
+        'HTTP/1.1 101 Web Socket Protocol Handshake\r\n' +
+        'Upgrade: WebSocket\r\n' +
+        'Connection: Upgrade\r\n' +
+        'Sec-WebSocket-Accept: ' + key + '\r\n' +
+        '\r\n'
     );
 };
 
-
 /**
- * @description Removes mask from incoming frame.
+ * Removes mask from incoming frame.
  * @param {Buffer} buffer Buffer object from data event of WebSocket.
  * @returns {String} Unmasked data.
  * @see http://stackoverflow.com/questions/8125507/how-can-i-send-and-receive-websocket-messages-on-the-server-side
- * @since v0.1.1
  */
 exports.getData = function (buffer) {
     var datalength = buffer[1] & 127;
     var indexFirstMask = 2;
-    if(datalength == 126) {
+    if (datalength == 126) {
         indexFirstMask = 4;
-    } else if(datalength == 127) {
+    } else if (datalength == 127) {
         indexFirstMask = 10;
     }
     
     var masks = buffer.slice(indexFirstMask, indexFirstMask + 4);
     var i = indexFirstMask + 4;
     var j = 0;
-    var output = "";
-    while(i < buffer.length) {
+    var output = '';
+    while (i < buffer.length) {
         var charCode = buffer[i] ^ masks[j % 4];
         output += String.fromCharCode(charCode);
         i += 1;
@@ -65,47 +58,41 @@ exports.getData = function (buffer) {
     return output;
 };
 
-
 /**
- * @description Wraps data in a websocket frame. Note that
- * UpgradeJS does not support payloads larger than 125 bytes.
+ * Wraps data in a websocket frame. Note that UpgradeJS does not support payloads larger than 125 bytes.
  * @param {String} msg Some data to wrap.
  * @returns {Buffer} Hex encoded Buffer.
  * @throws {RangeError}
  * @see http://stackoverflow.com/questions/8125507/how-can-i-send-and-receive-websocket-messages-on-the-server-side
- * @since v0.2.0
  */
 exports.frameData = function (msg) {
     // First 2 bytes are reserved.
-    var frame = "81"; // 129d
+    var frame = '81'; // 129d
     
     // Next 2 bytes are length of payload.
-    if(msg.length <= 125) {
+    if (msg.length <= 125) {
         var len = msg.length.toString(16);
-        frame += (len.length == 1) ? ("0" + len) : len;
+        frame += (len.length == 1) ? ('0' + len) : len;
     } else {
-        throw new RangeError("Frame data too large.");
+        throw new RangeError('Frame data too large.');
     }
     
     // Encode message as hex.
-    for(var i in msg) {
+    for (var i in msg) {
         frame += msg.charCodeAt(i).toString(16);
     }
     
-    return new Buffer(frame, "hex");
+    return new Buffer(frame, 'hex');
 };
 
-
 /**
- * @description Convenience method to lock send behavior
- * to a specific socket.
+ * Convenience method to lock send behavior to a specific socket.
  * @param {Socket} socket The socket to communicate over.
  * @returns {Function} Send behavior using a specific socket.
  * @example
  * var send = upgrade.getSend(socket);
- * send("foo");
- * send("bar");
- * @since v0.2.0
+ * send('foo');
+ * send('bar');
  */
 exports.getSend = function (socket) {
     return function (message) {
@@ -114,16 +101,14 @@ exports.getSend = function (socket) {
     };
 }
 
-
 /**
- * @description Convenience method for sending framed data.
+ * Convenience method for sending framed data.
  * @param {String} msg Data to send across websocket.
  * @param {Socket} socket The socket to commincate over.
  * @throws {RangeError}
  * @example
- * upgrade.send("foo", socket);
- * upgrade.send("bar", socket);
- * @since v0.2.0
+ * upgrade.send('foo', socket);
+ * upgrade.send('bar', socket);
  */
 exports.send = function (msg, socket) {
     var data = exports.frameData(msg);
