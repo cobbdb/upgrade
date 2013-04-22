@@ -1,15 +1,15 @@
 {
     "name": "upgrade",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "description": "A simple NodeJS websocket library to handle http upgrades.",
-    "homepage": "https://github.com/PetitGibier/UpgradeJS",
+    "homepage": "https://github.com/cobbdb/upgrade",
     "main": "upgrade.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
-        "url": "http://github.com/PetitGibier/UpgradeJS.git"
+        "url": "http://github.com/cobbdb/upgrade.git"
     },
     "keywords": [
         "websocket",
