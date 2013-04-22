@@ -99,7 +99,7 @@ exports.getSend = function (socket) {
         var data = exports.frameData(message);
         socket.write(data);
     };
-}
+};
 
 /**
  * Convenience method for sending framed data.

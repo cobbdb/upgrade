@@ -47,6 +47,7 @@ socket.onmessage = function (evt) {
 Write upgrade handshake header to socket.
 
 **Parameters**
+
 * {ServerRequest} req - ServerRequest from HTTPServer.
 * {Socket} socket - Socket from upgrade event.
 
@@ -60,6 +61,7 @@ server.on('upgrade', function (req, socket) {
 Removes mask from incoming frame.
 
 **Parameters**
+
 * {Buffer} buffer - Buffer object from data event of WebSocket.
 
 **Returns** {String} Unmasked data.
@@ -74,6 +76,7 @@ socket.on('data', function (buff) {
 Wraps data in a websocket frame. Note that UpgradeJS does not support payloads larger than 125 bytes.
 
 **Parameters**
+
 * {String} msg - Some data to wrap.
 
 **Returns** {Buffer} Hex encoded Buffer.  
@@ -89,6 +92,7 @@ socket.write(data);
 Convenience method to lock send behavior to a specific socket.
 
 **Parameters**
+
 * {Socket} socket - The socket to communicate over.
 
 **Returns** {Function} Send behavior using a specific socket.
@@ -104,6 +108,7 @@ send('bar');
 Convenience method for sending framed data.
 
 **Parameters**
+
 * {String} msg - Data to send across websocket.
 * {Socket} socket - The socket to commincate over.
 
