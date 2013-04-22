@@ -1,0 +1,142 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@1.2.18
+3 info using node@v0.10.4
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose publish [ '.' ]
+6 verbose read json F:\wamp\www\upgrade\package.json
+7 verbose cache add [ '.', null ]
+8 verbose cache add name=undefined spec="." args=[".",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: '.',
+9 verbose parsed url   path: '.',
+9 verbose parsed url   href: '.' }
+10 silly lockFile 3a52ce78- .
+11 verbose lock . C:\Users\Dan\AppData\Roaming\npm-cache\3a52ce78-.lock
+12 verbose read json package.json
+13 verbose tar pack [ 'C:\\Users\\Dan\\AppData\\Local\\Temp\\npm-5876\\1366657200437-0.5074076522141695\\tmp.tgz',
+13 verbose tar pack   '.' ]
+14 verbose tarball C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\tmp.tgz
+15 verbose folder .
+16 info prepublish upgrade@1.0.0
+17 silly lockFile 3a52ce78- .
+18 verbose lock . C:\Users\Dan\AppData\Roaming\npm-cache\3a52ce78-.lock
+19 silly lockFile d2544b87-00437-0-5074076522141695-tmp-tgz C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\tmp.tgz
+20 verbose lock C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\tmp.tgz C:\Users\Dan\AppData\Roaming\npm-cache\d2544b87-00437-0-5074076522141695-tmp-tgz.lock
+21 silly lockFile 3a52ce78- .
+22 silly lockFile 3a52ce78- .
+23 silly lockFile d2544b87-00437-0-5074076522141695-tmp-tgz C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\tmp.tgz
+24 silly lockFile d2544b87-00437-0-5074076522141695-tmp-tgz C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\tmp.tgz
+25 verbose tar unpack C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\tmp.tgz
+26 silly lockFile 9099b9df-00437-0-5074076522141695-package C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\package
+27 verbose lock C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\package C:\Users\Dan\AppData\Roaming\npm-cache\9099b9df-00437-0-5074076522141695-package.lock
+28 silly lockFile d2544b87-00437-0-5074076522141695-tmp-tgz C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\tmp.tgz
+29 verbose lock C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\tmp.tgz C:\Users\Dan\AppData\Roaming\npm-cache\d2544b87-00437-0-5074076522141695-tmp-tgz.lock
+30 silly gunzTarPerm modes [ '755', '644' ]
+31 silly gunzTarPerm extractEntry package.json
+32 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+33 silly gunzTarPerm extractEntry README.md
+34 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+35 silly gunzTarPerm extractEntry upgrade.js
+36 silly gunzTarPerm modified mode [ 'upgrade.js', 438, 420 ]
+37 verbose read json C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\package\package.json
+38 silly lockFile 9099b9df-00437-0-5074076522141695-package C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\package
+39 silly lockFile 9099b9df-00437-0-5074076522141695-package C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\package
+40 silly lockFile d2544b87-00437-0-5074076522141695-tmp-tgz C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\tmp.tgz
+41 silly lockFile d2544b87-00437-0-5074076522141695-tmp-tgz C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\tmp.tgz
+42 verbose from cache C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\package\package.json
+43 verbose tar pack [ 'C:\\Users\\Dan\\AppData\\Roaming\\npm-cache\\upgrade\\1.0.0\\package.tgz',
+43 verbose tar pack   'C:\\Users\\Dan\\AppData\\Local\\Temp\\npm-5876\\1366657200437-0.5074076522141695\\package' ]
+44 verbose tarball C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package.tgz
+45 verbose folder C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\package
+46 silly lockFile 9099b9df-00437-0-5074076522141695-package C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\package
+47 verbose lock C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\package C:\Users\Dan\AppData\Roaming\npm-cache\9099b9df-00437-0-5074076522141695-package.lock
+48 silly lockFile 4be8f6b7--cache-upgrade-1-0-0-package-tgz C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package.tgz
+49 verbose lock C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package.tgz C:\Users\Dan\AppData\Roaming\npm-cache\4be8f6b7--cache-upgrade-1-0-0-package-tgz.lock
+50 silly lockFile 9099b9df-00437-0-5074076522141695-package C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\package
+51 silly lockFile 9099b9df-00437-0-5074076522141695-package C:\Users\Dan\AppData\Local\Temp\npm-5876\1366657200437-0.5074076522141695\package
+52 silly lockFile 4be8f6b7--cache-upgrade-1-0-0-package-tgz C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package.tgz
+53 silly lockFile 4be8f6b7--cache-upgrade-1-0-0-package-tgz C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package.tgz
+54 silly lockFile 59aae31f--npm-cache-upgrade-1-0-0-package C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package
+55 verbose lock C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package C:\Users\Dan\AppData\Roaming\npm-cache\59aae31f--npm-cache-upgrade-1-0-0-package.lock
+56 silly lockFile 59aae31f--npm-cache-upgrade-1-0-0-package C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package
+57 silly lockFile 59aae31f--npm-cache-upgrade-1-0-0-package C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package
+58 verbose tar unpack C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package.tgz
+59 silly lockFile 59aae31f--npm-cache-upgrade-1-0-0-package C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package
+60 verbose lock C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package C:\Users\Dan\AppData\Roaming\npm-cache\59aae31f--npm-cache-upgrade-1-0-0-package.lock
+61 silly lockFile 4be8f6b7--cache-upgrade-1-0-0-package-tgz C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package.tgz
+62 verbose lock C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package.tgz C:\Users\Dan\AppData\Roaming\npm-cache\4be8f6b7--cache-upgrade-1-0-0-package-tgz.lock
+63 silly gunzTarPerm modes [ '755', '644' ]
+64 silly gunzTarPerm extractEntry package.json
+65 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+66 silly gunzTarPerm extractEntry README.md
+67 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+68 silly gunzTarPerm extractEntry upgrade.js
+69 silly gunzTarPerm modified mode [ 'upgrade.js', 438, 420 ]
+70 verbose read json C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package\package.json
+71 silly lockFile 59aae31f--npm-cache-upgrade-1-0-0-package C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package
+72 silly lockFile 59aae31f--npm-cache-upgrade-1-0-0-package C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package
+73 silly lockFile 4be8f6b7--cache-upgrade-1-0-0-package-tgz C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package.tgz
+74 silly lockFile 4be8f6b7--cache-upgrade-1-0-0-package-tgz C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package.tgz
+75 silly shasum updated bytes 2364
+76 info shasum a9bf06244db098e9556e918122f9e5e5f136fc5c
+76 info shasum C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package.tgz
+77 verbose from cache C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package\package.json
+78 verbose chmod C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package.tgz 644
+79 silly chown skipping for windows C:\Users\Dan\AppData\Roaming\npm-cache\upgrade\1.0.0\package.tgz
+80 silly lockFile 3a52ce78- .
+81 silly publish { name: 'upgrade',
+81 silly publish   version: '1.0.0',
+81 silly publish   description: 'A simple NodeJS websocket library to handle http upgrades.',
+81 silly publish   homepage: 'https://github.com/cobbdb/upgrade',
+81 silly publish   main: 'upgrade.js',
+81 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+81 silly publish   repository: { type: 'git', url: 'http://github.com/cobbdb/upgrade.git' },
+81 silly publish   keywords: [ 'websocket', 'http', 'upgrade', 'simple' ],
+81 silly publish   dependencies: { crypto: '*' },
+81 silly publish   author:
+81 silly publish    { name: 'Dan Cobb',
+81 silly publish      email: 'cobbdb@gmail.com',
+81 silly publish      url: 'http://sites.google.com/site/petitgibier/' },
+81 silly publish   readme: '# UpgradeJS\n### A simple NodeJS websocket library to handle http upgrades.\nVersion **1.0.0**\n\n---\n* See: [NPM Page](https://npmjs.org/package/upgrade)\n* See: [Github Repo](http://www.github.com/cobbdb/UpgradeJS)\n\n### Installation\n> ```\nnpm install upgrade\n```\n\n### Usage\n###### Here is an example of a basic upgrade setup:\n> ```JavaScript\n// server.js\nvar http = require(\'http\');\nvar upgrade = require(\'upgrade\');\nvar server = http.createServer();\nserver.on(\'upgrade\', function (req, socket) {\n    var send = upgrade.getSend(socket);\n    upgrade.writeHead(req, socket);\n    socket.on(\'data\', function (buff) {\n        var data = upgrade.getData(buff);\n        console.log(\'> \' + data);\n    });\n    send(\'Welcome to the Server!\');\n});\nserver.listen(8000);\n```\n```JavaScript\n// client.js\nvar socket = new WebSocket(\'ws://localhost:8000\');\nsocket.onopen = function () {\n    socket.send(\'Hello Server!\');\n    console.log(\'> Socket Open.\');\n};\nsocket.onmessage = function (evt) {\n    var msg = evt.data;\n    console.log(\'> \' + msg);\n};\n```\n\n\n## writeHead(req, socket)\nWrite upgrade handshake header to socket.\n\n**Parameters**\n\n* {ServerRequest} req - ServerRequest from HTTPServer.\n* {Socket} socket - Socket from upgrade event.\n\n```JavaScript\nserver.on(\'upgrade\', function (req, socket) {\n    upgrade.writeHead(req, socket);\n```\n\n\n## getData(buffer)\nRemoves mask from incoming frame.\n\n**Parameters**\n\n* {Buffer} buffer - Buffer object from data event of WebSocket.\n\n**Returns** {String} Unmasked data.\n\n```JavaScript\nsocket.on(\'data\', function (buff) {\n    var data = upgrade.getData(buff);\n```\n\n\n## frameData(msg)\nWraps data in a websocket frame. Note that UpgradeJS does not support payloads larger than 125 bytes.\n\n**Parameters**\n\n* {String} msg - Some data to wrap.\n\n**Returns** {Buffer} Hex encoded Buffer.  \n**Throws** {RangeError}\n\n```JavaScript\nvar data = exports.frameData(message);\nsocket.write(data);\n```\n\n\n## getSend(socket)\nConvenience method to lock send behavior to a specific socket.\n\n**Parameters**\n\n* {Socket} socket - The socket to communicate over.\n\n**Returns** {Function} Send behavior using a specific socket.\n\n```JavaScript\nvar send = upgrade.getSend(socket);\nsend(\'foo\');\nsend(\'bar\');\n```\n\n\n## send(msg, socket)\nConvenience method for sending framed data.\n\n**Parameters**\n\n* {String} msg - Data to send across websocket.\n* {Socket} socket - The socket to commincate over.\n\n**Throws** {RangeError}\n\n```JavaScript\nupgrade.send(\'foo\', socket);\nupgrade.send(\'bar\', socket);\n```\n\n---\nBy Dan Cobb: <cobbdb@gmail.com> - [petitgibier.sytes.net](http://petitgibier.sytes.net)\n',
+81 silly publish   readmeFilename: 'README.md',
+81 silly publish   _id: 'upgrade@1.0.0',
+81 silly publish   dist: { shasum: 'a9bf06244db098e9556e918122f9e5e5f136fc5c' },
+81 silly publish   _from: '.' }
+82 verbose url raw upgrade
+83 verbose url resolving [ 'https://registry.npmjs.org/', './upgrade' ]
+84 verbose url resolved https://registry.npmjs.org/upgrade
+85 info trying registry request attempt 1 at 12:00:13
+86 http PUT https://registry.npmjs.org/upgrade
+87 http 409 https://registry.npmjs.org/upgrade
+88 verbose url raw upgrade
+89 verbose url resolving [ 'https://registry.npmjs.org/', './upgrade' ]
+90 verbose url resolved https://registry.npmjs.org/upgrade
+91 info trying registry request attempt 1 at 12:00:15
+92 http GET https://registry.npmjs.org/upgrade
+93 http 200 https://registry.npmjs.org/upgrade
+94 error publish fail Cannot publish over existing version.
+94 error publish fail Update the 'version' field in package.json and try again.
+94 error publish fail
+94 error publish fail If the previous version was published in error, see:
+94 error publish fail     npm help unpublish
+94 error publish fail
+94 error publish fail To automatically increment version numbers, see:
+94 error publish fail     npm help version
+95 error System Windows_NT 6.1.7601
+96 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+97 error cwd F:\wamp\www\upgrade
+98 error node -v v0.10.4
+99 error npm -v 1.2.18
+100 error code EPUBLISHCONFLICT
+101 verbose exit [ 1, true ]
