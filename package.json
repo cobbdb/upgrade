@@ -1,6 +1,6 @@
 {
     "name": "upgrade",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A simple NodeJS websocket library to handle http upgrades.",
     "homepage": "https://github.com/cobbdb/upgrade",
     "main": "upgrade.js",

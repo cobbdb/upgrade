@@ -1,10 +1,10 @@
 # UpgradeJS
 ### A simple NodeJS websocket library to handle http upgrades.
-Version **1.0.1**
+Version **1.0.2**
 
 ---
 * See: [NPM Page](https://npmjs.org/package/upgrade)
-* See: [Github Repo](http://www.github.com/cobbdb/UpgradeJS)
+* See: [Github Repo](http://www.github.com/cobbdb/upgrade)
 
 ### Installation
 > ```
@@ -120,4 +120,5 @@ upgrade.send('bar', socket);
 ```
 
 ---
-By Dan Cobb: <cobbdb@gmail.com> - [petitgibier.sytes.net](http://petitgibier.sytes.net)
+By Dan Cobb: <cobbdb@gmail.com> - [petitgibier.sytes.net](http://petitgibier.sytes.net)  
+License: MIT

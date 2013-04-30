@@ -3,7 +3,7 @@
  * A native NodeJS WebSocket library.
  * 
  * @author Dan Cobb
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 var crypto = require('crypto');
