@@ -1,5 +1,5 @@
-# UpgradeJS
-### A simple NodeJS websocket library to handle http upgrades.
+# Upgrade
+### A simple Node websocket library to handle http upgrades.
 Version **1.0.2**
 
 ---
