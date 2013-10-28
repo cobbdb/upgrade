@@ -1,6 +1,6 @@
 # Upgrade
 ### A simple Node websocket library to handle http upgrades.
-Version **1.0.2**
+Version **1.1.0**
 
 ---
 * See: [NPM Page](https://npmjs.org/package/upgrade)
