@@ -1,6 +1,6 @@
 {
     "name": "upgrade",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "license": "MIT",
     "description": "A simple Node websocket library to handle http upgrades.",
     "homepage": "https://github.com/cobbdb/upgrade",
@@ -16,10 +16,10 @@
         "websocket",
         "http",
         "upgrade",
+        "native",
         "simple"
     ],
     "dependencies": {
-        "crypto": "*"
     },
     "author": {
         "name": "Dan Cobb",
